@@ -33,6 +33,7 @@ module.exports = function($server) {
     'Discordbot'
   ]);
   prerender.set('prerenderServiceUrl', url);
+  prerender.set('protocol', process.env.EXPRESS_URL.indexOf('https://') === 0 ? 'https' : 'http');
 
   $server.use(prerender);
 };
