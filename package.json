@@ -1,0 +1,25 @@
+{
+  "name": "allons-y-prerender",
+  "version": "0.1.0",
+  "description": "Create public pages to be crawled by search engines such as Google.",
+  "license": "MIT",
+  "homepage": "https://allons-y.io",
+  "author": "CodeCorico <hello@codecorico.com>",
+  "bugs": "https://github.com/CodeCorico/allons-y-prerender/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeCorico/allons-y-prerender.git"
+  },
+  "engines": {
+    "node": ">=4.1",
+    "npm": ">=3.2"
+  },
+  "devDependencies": {
+    "allons-y-dev-chore": "^1.0.0"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.12",
+    "prerender": "^4.3.1",
+    "prerender-node": "^2.5.0"
+  }
+}

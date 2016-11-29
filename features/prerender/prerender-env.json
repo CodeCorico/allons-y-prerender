@@ -1,0 +1,31 @@
+{
+  "env": [{
+    "type": "confirm",
+    "name": "PRERENDER",
+    "message": "Enable Prerender:"
+  }, {
+    "type": "input",
+    "name": "PRERENDER_COUNT",
+    "message": "Prerender instances do you want to start (number or \"cpu\"):",
+    "default": 1,
+    "when": "PRERENDER=true"
+  }, {
+    "type": "input",
+    "name": "PRERENDER_RESTARTS",
+    "message": "Prerender instances have to restart on crash:",
+    "default": 10,
+    "when": "PRERENDER=true"
+  }, {
+    "type": "input",
+    "name": "PRERENDER_URL",
+    "message": "URL of your Prerender server can be called (you can use '{port}'):",
+    "default": "http://localhost:{port}",
+    "when": "PRERENDER=true"
+  }, {
+    "type": "input",
+    "name": "PRERENDER_PORT",
+    "message": "Port for the Prerender instance:",
+    "default": "8083",
+    "when": "PRERENDER=true"
+  }]
+}

@@ -1,0 +1,7 @@
+{
+  "databases": [{
+    "type": "mongo",
+    "name": "Prerender",
+    "description": "Mongo database containing the Prerender pages cache."
+  }]
+}
