@@ -41,6 +41,8 @@ module.exports = {
 
 var mongo_cache = {
     get: function(key, callback) {
+        key = key.lastIndexOf('/') === key.length - 1 ? key.substr(0, key.length - 1) : key;
+
         database.collection(process.env.MONGOLAB_COLLECTION, function(err, collection) {
             collection.findOne({key: key}, function (err, item) {
                 var value = item ? item.value : null;
@@ -49,6 +51,8 @@ var mongo_cache = {
         });
     },
     set: function(key, value, callback) {
+        key = key.lastIndexOf('/') === key.length - 1 ? key.substr(0, key.length - 1) : key;
+
         database.collection(process.env.MONGOLAB_COLLECTION, function(err, collection) {
             var object = {key: key, value: value, created: new Date()};
             collection.update({key: key}, object, {
