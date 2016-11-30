@@ -28,7 +28,9 @@ module.exports = function($allonsy, $done) {
 
   process.env.MONGOLAB_URI = 'mongodb://' + (
     process.env[DATABASE_NAMESPACE + 'USER'] ?
-      process.env[DATABASE_NAMESPACE + 'USER'] + (process.env[DATABASE_NAMESPACE + 'PASSWORD'] || '') + '@' :
+      process.env[DATABASE_NAMESPACE + 'USER'] + (
+        process.env[DATABASE_NAMESPACE + 'PASSWORD'] ? ':' + process.env[DATABASE_NAMESPACE + 'PASSWORD'] : ''
+      ) + '@' :
       ''
   ) + process.env[DATABASE_NAMESPACE + 'HOST'] + (
     process.env[DATABASE_NAMESPACE + 'PORT'] ? ':' + process.env[DATABASE_NAMESPACE + 'PORT'] : ''
