@@ -1,3 +1,9 @@
+<a name="1.0.3"></a>
+# [1.0.3](https://github.com/CodeCorico/allons-y-prerender/compare/1.0.2...1.0.3) (2016-11-30)
+
+### Bug Fixes
+* **prerender server:** missing ':' for the user:password mongodb uri [#f5b84e3](https://github.com/CodeCorico/allons-y-prerender/commit/f5b84e3)
+
 <a name="1.0.2"></a>
 # [1.0.2](https://github.com/CodeCorico/allons-y-prerender/compare/1.0.1...1.0.2) (2016-11-30)
 
