@@ -1,6 +1,6 @@
 {
   "name": "allons-y-prerender",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create public pages to be crawled by search engines such as Google.",
   "license": "MIT",
   "homepage": "https://allons-y.io",
