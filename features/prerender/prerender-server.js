@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function($allonsy, $done) {
-
   process.env.PORT = process.env.PRERENDER_PORT;
   process.env.DISABLE_LOGGING = true;
 
@@ -9,6 +8,7 @@ module.exports = function($allonsy, $done) {
       DATABASE_COLLECTION = 'prerender',
 
       path = require('path'),
+      cluster = require('cluster'),
       prerender = require('prerender'),
 
       server = prerender({
@@ -41,7 +41,9 @@ module.exports = function($allonsy, $done) {
 
   $allonsy.log('allons-y-prerender', 'server:start');
 
-  $allonsy.outputInfo('► PRERENDER SERVER IS RUNNING ON :' + process.env.PRERENDER_PORT);
+  if (!cluster.isMaster) {
+    $allonsy.outputInfo('► PRERENDER SERVER (#' + cluster.worker.id + ') IS RUNNING ON :' + process.env.PRERENDER_PORT);
+  }
 
   server.start();
 
