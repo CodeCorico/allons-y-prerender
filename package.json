@@ -20,6 +20,6 @@
   "dependencies": {
     "mongodb": "^2.2.12",
     "prerender": "^4.3.1",
-    "prerender-node": "^2.5.0"
+    "prerender-node": "^3.0.0"
   }
 }
